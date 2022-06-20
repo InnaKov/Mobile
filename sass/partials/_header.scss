@@ -1,0 +1,149 @@
+header {
+	@include box;
+	position: relative;
+    left: 0px;
+    .logo{
+  		float: left;
+  		width: 146px;
+  		height: auto;
+ 		overflow: hidden;
+ 		margin: 30px 600px 10px 100px;
+ 		@media (max-width: 1439px) {
+    		margin: 30px 300px 10px 100px;
+    	}
+    	@media (max-width: 1279px) {
+    		margin: 30px 0 10px 20px;
+    	}
+    	a{
+  			display: block;
+  			img{
+    			float: left;
+    			width: 100%;
+   				height: 100%;
+   				@media (max-width: 1279px) {
+    				width: 90%;
+    			}
+    			@media (max-width: 767px) {
+    				width: 80%;
+    			}
+   			}
+   		}	
+		h1{
+    		text-indent: -9999px;
+    	}
+    }
+    .menu{
+		display: none;
+		width: 30px;
+		height: 24px;
+		position: relative;
+		float: right;
+		top: 20px;
+		@media (max-width: 767px) {
+			display: block;
+			&:hover+nav{
+				display: flex;
+			}
+			&:active+nav{
+				display: flex;
+			}
+		}
+		span{
+			width: 100%;
+			height: 3px;
+			background: #333333;
+			border-radius: 3px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			transition: 0.5s all linear;
+			&:nth-of-type(2){
+				top: 10px;
+			}
+			&:nth-of-type(3){
+				top: 21px;
+			}
+		}
+		&:hover{
+			span:nth-of-type(2){
+				width: 0px;
+			}
+		}
+		&:active{
+			span:nth-of-type(2){
+				width: 0px;
+			}
+		}
+		&:hover{
+			span:nth-of-type(1){
+				transform: rotate(45deg);
+			}
+		}
+		&:active{
+			span:nth-of-type(1){
+				transform: rotate(45deg);
+			}
+		}
+		&:hover{
+			span:nth-of-type(3){
+				transform: rotate(-45deg) translateX(15px) translateY(-15px);
+			}
+		}
+		&:active{
+			span:nth-of-type(3){
+				transform: rotate(-45deg) translateX(15px) translateY(-15px);
+			}
+		}
+	}
+	nav{
+    	float: left;
+    	display: block;
+    	margin: 30px 0 0 0;
+    	@media (max-width: 1279px) {
+    		margin: 30px 0 0 140px;
+    	}
+    	@media (max-width: 767px) {
+			display: none;
+    		flex-direction: column;
+			width: 50%;
+			position: fixed;
+			left: 0;
+			top: 69px;
+			padding: 0 20px;
+			backdrop-filter: brightness(0.7);
+			margin: 0;
+			z-index: 10;
+    	}
+		a{
+    		font-family: $brand-font-family1;
+    		font-style: $base-font-style;
+    		font-weight: $font-weight-semi-bold;
+    		font-size: 15px;
+    		line-height: 150%;
+    		letter-spacing: 0.01em;
+    		text-transform: uppercase;
+    		color: $font-color-black;
+    		margin: 0 10px 0 0;
+    		@media (max-width: 767px) {
+    			margin: 0 0 0 0;
+    			padding: 10px 0 10px 0;
+    			font-size: 8px;
+    			color: $font-color-white;
+    			text-align: center;
+    			&+a{
+    				border-top: 1px solid #e2e2e2;
+    			}
+    		}    			
+    		&:hover{
+    			font-size: 18px;
+    			color: #FFA500;
+    			@media (max-width: 767px) {
+    				font-size: 8px;
+    				text-align: center;
+    			}
+    		}
+    	}		
+	}
+}
+	
+						
